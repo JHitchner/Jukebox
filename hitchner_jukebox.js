@@ -1,29 +1,29 @@
-// targets the play button from the page and
-//  stores a reference to it in the playButton variable
-// this play button has global scope
+
 var playBtn = document.querySelector("#play");
 var pauseBtn = document.querySelector("#pause");
 var backBtn = document.querySelector("#back");
 var nextBtn = document.querySelector("#next");
 
-var mySongs = document.querySelectorAll("audio")
+var audio = document.querySelector("#audio");
 
- // defines the Jukebox object
 function Jukebox() {
-  this.list = [ "song1", "song2","song3"];
+  this.list = [];
   this.index = 0;
-  this.currentSong = this.list[this.index]
-   // the code for what happens when you create a Jukebox object
-   //  goes here
+  this.currentSong = audio[this.index]
+  // this.list[this.index]
+//    // the code for what happens when you create a Jukebox object
+//    //  goes here
  }
 
  // defines the Jukebox prototype object
-Jukebox.prototype.play = function () {
-   this.currentSong = this.list[this.index];
-   console.log(this.currentSong);
- }
+ 
+Jukebox.prototype.start = function () {
+  this.currentSong = this.list[this.index];
+  console.log(currentSong)
+  console.log("I am playing")
+}
 
-Jukebox.prototype.pause = function () {
+Jukebox.prototype.stop = function () {
 // code for stopping song here
   console.log("I am paused")
  };
@@ -45,8 +45,8 @@ Jukebox.prototype.next = function () {
     this.index = 0;
     console.log(this.list[this.index])
   }else if (this.index + 1 < this.list.length){
-  console.log(this.currentSong)
-  this.index++
+    console.log(this.currentSong)
+    this.index++
   }
 };
 
@@ -58,29 +58,23 @@ Jukebox.prototype.next = function () {
 
 
  // adds an event listener for when you click the play button
- playBtn.addEventListener("click", function(event){
-   jukebox.play(this.index);
+playBtn.addEventListener("click", function(event){
+   audio.play()
+   console.log("i was clicked")
+  //  jukebox.play(this.index);
    // prevents link from going to the next page
    event.preventDefault()
-    })
-   pauseBtn.addEventListener("click", function(event){
-     jukebox.pause();
+})
+    //
+  pauseBtn.addEventListener("click", function(event){
+     audio.pause();
      event.preventDefault()
-   })
-   backBtn.addEventListener("click", function(event){
+  })
+  backBtn.addEventListener("click", function(event){
      jukebox.back(this.index);
      event.preventDefault()
-   })
-   nextBtn.addEventListener("click", function(event){
+  })
+  nextBtn.addEventListener("click", function(event){
      jukebox.next();
      event.preventDefault()
-   })
-
-   // the rest of the code
-   //  for what happens when you click the play button goes here
-
-   // uses the jukebox object to play the music file
-
-
-
- // the rest of your event listeners would go here
+  })
