@@ -2,38 +2,33 @@
  <html>
    <head>
      <meta charset="utf-8">
-     <title>Juliet's Jukebox</title>
+     <title>Dethklok Jukebox</title>
      <link rel="stylesheet" href="hitchner_jukebox.css">
    </head>
    <body>
-     <h1>My Jukebox</h1>
+     <h1>Brutal Jukebox</h1>
      <div class="jukeBoxContainer">
       <div id=photo_box>
-         <img class="covers"src="photos/dethklok.jpg" alt="">
-         <img class="covers"src="photos/syrim.jpg" alt="">
-         <img class="covers"src="photos/dethklok2.jpg" alt=""
+        <img class="covers"src="photos/dethklok2.jpg" alt="">
+      </div>
+       <audio class= "audio">
+         <source src="music/Fansong.mp3"type="audio/ogg">
+       </audio>
+       <audio class= "audio">
+         <source src="music/Thunderhorse.mp3"type="audio/ogg">
+       </audio>
+       <audio class= "audio">
+         <source src="music/Awaken.mp3" type="audio/ogg">
+       </audio>
+       <div id="myBtns">
+         <p id="songTitle"></p>
+         <a href="#" id="play">Play</a>
+         <a href="#" id="pause">||</a>
+         <a href="#" id="stop">Stop</a>
+         <a href="#"id="back"> << </a>
+         <a href="#" id="next"> >> </a>
        </div>
-       <audio class= "audio">
-         <source src="Fansong.mp3" type="audio/ogg">
-       </audio>
-       <audio class= "audio">
-         <source src="Dragonborn.mp3" type="audio/ogg">
-       </audio>
-       <audio class= "audio">
-         <source src="Thunderhorse.mp3" type="audio/ogg">
-       </audio>
-       <audio class= "audio">
-         <source src="Awaken.mp3" type="audio/ogg">
-       </audio>
-       <p id="songTitle"></p>
-       <!-- My buttons -->
-       <a href="#" id="play">Play</a>
-       <a href="#" id="pause"><strong>||</strong></a>
-       <a href="#" id="stop">Stop</a>
-       <a href="#"id="back"> <strong><<</strong></a>
-       <a href="#" id="next"> <strong>>></strong></a>
-     </div>
-
+      </div>
      <script src="hitchner_jukebox.js"></script>
    </body>
  </html>
