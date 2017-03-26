@@ -7,15 +7,57 @@ h1{
   position: relative;
   text-align: center;
 }
-a{
-  border: 2px solid white;
-  padding: 5px;
+.jukeBoxContainer{
   position: relative;
-  top: 50px;
+  left:850px;
+}
+#songTitle{
+  font-family:"Century Gothic", CenturyGothic, AppleGothic, serif;
+  color:white;
+  padding:5px;
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  left:40px;
+  background-color: steelblue;
+  width: 500px;
+  height:50px;
+  top: 500px;
+}
+a{
+  text-decoration: none;
+  border: 2px solid white;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+  display:block;
+  position: relative;
+  top: 500px;
   background-color: steelblue;
   color:white;
   border-radius: 10px;
-  left: 400px;
+  left: 175px;
+}
+#pause{
+  display:none;
+  left:200px;
+}
+#play{
+  left: 200px;
+}
+#stop{
+  top:444px;
+  left: 300px;
+}
+#next{
+  top: 330px;
+  left: 480px;
+}
+#back{
+  top: 390px;
+  left: 40px;
+}
 }
 #photo_box{
   border: 3px solid white;
@@ -24,14 +66,17 @@ a{
   top: 10px;
   background-color: steelblue;
   border-radius: 15px;
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 600px;
+}
+.covers{
+  /*display:none;*/
 }
 img{
   background-color: black;
-  height: 200px;
-  width: 200px;
-  position: relative;
+  height: 400px;
+  width: 500px;
+  position: absolute;
   left: 50px;
   top: 50px;
 }
